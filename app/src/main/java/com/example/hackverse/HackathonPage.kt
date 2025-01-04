@@ -154,7 +154,7 @@ class HackathonPage : AppCompatActivity() {
                                                 binding.register.isEnabled = true
                                                 binding.register.isClickable = true
                                                 binding.register.text = "Check Team Details"
-                                                binding.chat.visibility = View.VISIBLE
+                                                //binding.chat.visibility = View.VISIBLE
                                                 binding.register.setTextColor(Color.parseColor("#FFFFFF"))
                                                 binding.register.backgroundTintList =
                                                     ColorStateList.valueOf(Color.parseColor("#4CAF50"))
@@ -178,7 +178,7 @@ class HackathonPage : AppCompatActivity() {
                                             if (participatedDoc.exists()) {
                                                 binding.register.isEnabled = true
                                                 binding.register.isClickable = true
-                                                binding.chat.visibility = View.VISIBLE
+                                                //binding.chat.visibility = View.VISIBLE
                                                 binding.register.text = "Check Team Details"
                                                 binding.register.setTextColor(Color.parseColor("#FFFFFF"))
                                                 binding.register.backgroundTintList =
@@ -209,7 +209,7 @@ class HackathonPage : AppCompatActivity() {
                             if (documentSnapshot.getString("UserID") == userID) {
                                 binding.edit.visibility = View.VISIBLE
                                 binding.delete.visibility = View.VISIBLE
-                                binding.chat.visibility = View.VISIBLE
+                                //binding.chat.visibility = View.VISIBLE
                                 binding.info.visibility = View.VISIBLE
                             } else {
                                 binding.edit.visibility = View.GONE
@@ -243,11 +243,11 @@ class HackathonPage : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
-                binding.chat.setOnClickListener {
-                    val intent = Intent(this, chat::class.java)
-                    intent.putExtra("UID", UID)
-                    startActivity(intent)
-                }
+//                binding.chat.setOnClickListener {
+//                    val intent = Intent(this, chat::class.java)
+//                    intent.putExtra("UID", UID)
+//                    startActivity(intent)
+//                }
                 binding.like.setOnClickListener {
                     val currentTintColor = binding.like.imageTintList?.defaultColor
                     if(UID!=null){
