@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:id="@+id/toolbar"
+        android:background="@color/my_primary"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back"
+            app:tint="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/header"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:text="Help Center"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/faq_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+            <LinearLayout
+                android:id="@+id/faq_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="6dp"
+                android:layout_marginTop="6dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1. What is HackVerse?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HackVerse is a platform designed to manage hackathons, connect participants, and streamline event planning."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2. How do I create a hackathon?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To create a hackathon, click the add button in the center of the screen, fill in the details, and click upload the hackathon."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3. Can I create teams for hackathons?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes, you can create teams for hackathons by registering for the hackathon and then sharing the invite link to your friends."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4. Can I edit my profile details?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes, you edit your profile details by pressing the profile icon on the top left corner of the screen and then pressing on edit profile."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5. Can I make multiple teams for the same hackathon?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No, you cannot make multiple teams for the same hackathon. Once you've made or joined a team, you can no longer create or join another team."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6. How to change team name?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To change team name, go to the respective hackathon page, click on check team details, there will be an edit option at the top right corner of the page. Press that, change the team name, and click on update team details."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7. How to kick a team member?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To kick a team member, go to the respective hackathon page, click on check team details, there will be an edit option at the top right corner of the page. Press that, click the delete option beside the respective team member, and press update details."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8. How to leave a hackathon team?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To leave a hackathon team, go to the respective hackathon page, click on check team details, there will be a leave option at the top right corner of the page. Click that and press yes."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9. How to get all team details who have participated?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open the specific hackathon page, press the 'i' button on top of the page, see the participated team details. Subsequently, you can press the download button on the right to get the PDF of the respective details."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10. How to check my upcoming schedule?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go to the calendar section, your participated hackathons will be marked by a small dot below the specific date, click on that date to get more information."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11. How to see all my organised hackathons?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To see all your organized hackathons click the 'My Hackathons' section then click on created, you'll get a list of all your organized hackathons."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12. How to contact my hackathon team members/team leader?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To contact your team leader or team member go to the hacakthon page click on check details, then click on the email button adjacent to the member you want to contact."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13. How to delete a hackathon?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go to the hackathon page of your hackathon you'll see a delete option at the top right corner of the page, click it and delete hackathon."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="14. How to delete my profile?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To delete your profile click on the options menu on top right corner of the page then click the delete account option, press yes to delete your account permanently."
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15. How to like or comment on a hackathon?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Go to the hackathon page of that particular hacakthon you'll see a heart icon next to the name of the hackathon, click that to like the hackathon, to comment scroll below there is a comment section at the end of the page, to delete the comments you've made you can simply press the delete option above your comment."
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#036261"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="16dp"/>
+
+            <TextView
+                android:id="@+id/contact_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/faq_list"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email ID : "
+                    android:drawablePadding="6dp"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1919"
+                    android:layout_marginTop="4dp"
+                    app:drawableTint="#036261"
+                    app:drawableStartCompat="@drawable/email" />
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hello.shuvrodip@gmail.com"
+                    android:textSize="14dp"
+                    android:textColor="#0000EE"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave a Feedback"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp" />
+
+            <EditText
+                android:id="@+id/feedback_box"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="top|start"
+                android:hint="Type your feedback here..."
+                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/textbox_background"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thanks for your feedback!"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="8dp"
+                app:drawableLeftCompat="@drawable/check"
+                app:drawableTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

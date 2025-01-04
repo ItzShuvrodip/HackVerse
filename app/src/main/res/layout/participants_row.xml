@@ -1,0 +1,81 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="16dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="14dp"
+        android:paddingHorizontal="18dp"
+        android:gravity="center_vertical|start"
+        android:layout_gravity="center_vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/image"
+            android:src="@drawable/defaultdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="6dp"
+            app:shapeAppearanceOverlay="@style/CustomCircularShape" />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Member Name"
+                android:layout_toEndOf="@id/image"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:id="@+id/name"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_toEndOf="@id/image"
+                android:layout_marginHorizontal="8dp"
+                tools:text="emailid@gmail.com"
+                android:layout_marginVertical="2dp"
+                android:id="@+id/email"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/email"
+            android:id="@+id/emailButton"
+            android:clickable="true"
+            android:visibility="visible"
+            android:background="@drawable/rounded_corners"
+            android:padding="6dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#0066CC"
+            app:tint="#FFFFFF" />
+        <ImageView
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:src="@drawable/ic_menu_delete"
+            android:id="@+id/kickButton"
+            android:clickable="true"
+            android:visibility="gone"
+            android:background="@drawable/rounded_corners"
+            android:padding="6dp"
+            android:backgroundTint="#FFBBBB"
+            app:tint="#640101" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

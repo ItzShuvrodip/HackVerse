@@ -1,0 +1,77 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical">
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/circle_shape"
+            android:backgroundTint="#4CAF50" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ready"
+            android:layout_marginEnd="6sp"
+            android:visibility="visible"
+            android:text="Get Ready !!"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/days"
+            android:visibility="visible"
+            android:layout_marginEnd="6sp"
+            tools:text="3 Days Left for"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                tools:text="Algoverse"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_marginEnd="6sp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/today"
+            tools:text="is Today"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:layout_marginEnd="6sp"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hurry"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="!! Hurry Up !!"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

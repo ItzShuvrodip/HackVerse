@@ -1,0 +1,177 @@
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="3dp"
+    android:elevation="20dp"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="26dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/teamnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1. "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp" />
+        <TextView
+            android:id="@+id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Omnipotent"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/teamnumber"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/dropdown"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/dropdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dropdown"
+            android:padding="6dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/squircle_background"
+            android:backgroundTint="#7ABCBCBC"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:id="@+id/member"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginHorizontal="14dp"
+        android:background="#12494949"
+        android:translationY="-500dp">
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/section3"
+        android:text="Team Leader"
+        app:layout_constraintTop_toBottomOf="@id/bar2"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/section3"
+        android:id="@+id/leader"
+        android:elevation="20dp"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="10dp"
+        app:cardCornerRadius="16dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="18dp"
+            android:gravity="center_vertical|start"
+            android:layout_gravity="center_vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/leaderimage"
+                android:src="@drawable/defaultdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="6dp"
+                app:shapeAppearanceOverlay="@style/CustomCircularShape" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Leader Name"
+                android:layout_toEndOf="@id/leaderimage"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginVertical="4dp"
+                android:id="@+id/leadername"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/leaderimage"
+                android:layout_marginHorizontal="8dp"
+                android:layout_below="@id/leadername"
+                tools:text="emailid@gmail.com"
+                android:layout_marginVertical="2dp"
+                android:id="@+id/leaderemail"
+                android:textSize="14dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/email"
+                android:id="@+id/emaillead"
+                android:clickable="true"
+                android:visibility="visible"
+                android:background="@drawable/rounded_corners"
+                android:padding="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#0066CC"
+                app:tint="#FFFFFF" />
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:id="@+id/section4"
+        android:text="Team Members"
+        app:layout_constraintTop_toBottomOf="@id/leader"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/none"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="--None--"
+            android:paddingBottom="6dp"
+            android:layout_marginHorizontal="30dp"
+            android:textStyle="bold"/>
+        <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/members"
+        android:layout_marginTop="10dp"
+        android:nestedScrollingEnabled="false"
+        app:layout_constraintTop_toBottomOf="@id/section4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.HackVerse" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/my_primary</item>
+    </style>
+
+    <style name="Theme.HackVerse" parent="Base.Theme.HackVerse" />
+    <style name="CustomCircularShape" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.HackVerse.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#E6FBF9</item>
+    </style>
+    <style name="Theme.HackVerse.NoActionBar1">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/my_primary</item>
+    </style>
+
+</resources>

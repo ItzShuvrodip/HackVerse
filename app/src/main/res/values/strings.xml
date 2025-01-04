@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HackVerse</string>
+    <string name="title_activity_homepage">Homepage</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="help">Help Center</string>
+    <string name="about_us">About Us</string>
+    <string name="delete_account">Delete Account</string>
+
+    <string name="tagline">ㅤA Seamless Hackathon Manager Appㅤ</string>
+</resources>

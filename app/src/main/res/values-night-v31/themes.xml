@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LaunchTheme" parent="SplashScreenTheme">
+        <item name="android:windowSplashScreenBackground">#E6FBF9</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@null</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@null</item>
+    </style>
+</resources>

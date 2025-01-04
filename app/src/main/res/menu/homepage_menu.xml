@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_menu_help"
+        android:iconTint="@color/black"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/aboutus"
+        android:icon="@drawable/ic_menu_aboutus"
+        android:iconTint="@color/black"
+        android:title="@string/about_us" />
+    <item
+        android:id="@+id/sign_out"
+        android:icon="@drawable/ic_menu_signout"
+        android:iconTint="@color/black"
+        android:title="@string/sign_out" />
+
+    <item
+        android:id="@+id/delete_account"
+        android:icon="@drawable/ic_menu_delete"
+        android:iconTint="#D32F2F"
+        android:title="@string/delete_account" />
+</menu>
