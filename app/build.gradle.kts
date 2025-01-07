@@ -12,15 +12,14 @@ android {
         applicationId = "com.example.hackverse"
         minSdk = 27
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.1"
-
+        versionCode = 3
+        versionName = "1.1.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

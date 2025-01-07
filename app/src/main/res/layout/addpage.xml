@@ -139,7 +139,7 @@
                 android:id="@+id/organisingevent"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:hint="Organising Event"
+                android:hint="Organizing Event"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -169,7 +169,7 @@
                 android:id="@+id/organisingauthority"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:hint="Organising Authority"
+                android:hint="Organizing Authority"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -573,7 +573,7 @@
                 android:id="@+id/name"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:hint="Organiser's Name"
+                android:hint="Organizer's Name"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -634,7 +634,7 @@
                 android:id="@+id/email"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:hint="Organiser's Email ID"
+                android:hint="Organizer's Email ID"
                 android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:textSize="15dp" />

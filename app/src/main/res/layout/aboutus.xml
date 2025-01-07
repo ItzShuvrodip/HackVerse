@@ -156,7 +156,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HackVerse is a seamless hackathon management app, developed to create, join, and organise hackathons in an ordered manner. It also allows friends to share hackathons and make and manage teams without any effort."
+                    android:text="HackVerse is a seamless hackathon management app, developed to create, join, and organize hackathons in an ordered manner. It also allows friends to share hackathons and make and manage teams without any effort."
                     android:paddingBottom="16dp" />
 
                 <TextView
@@ -191,13 +191,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="- Let the organisers know your views about the hackathons"
+                    android:text="- Let the organizers know your views about the hackathons"
+                    android:paddingBottom="4dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Participants and organizers can chat and interact"
                     android:paddingBottom="4dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="- Organisers can get quick hackathon participation details"
+                    android:text="- Organizers can get quick hackathon participation details"
                     android:paddingBottom="16dp" />
 
 

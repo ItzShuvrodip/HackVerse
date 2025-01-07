@@ -40,6 +40,8 @@ class HackathonPage : AppCompatActivity() {
             private lateinit var CommentList: MutableList<Comment>
             private lateinit var adapter: CommentsAdapter
             var iurl:String?=null
+            var isChat=false
+            var teamName:String?=null
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
@@ -153,8 +155,8 @@ class HackathonPage : AppCompatActivity() {
                                             if (participatedDoc.exists()) {
                                                 binding.register.isEnabled = true
                                                 binding.register.isClickable = true
+                                                isChat=true
                                                 binding.register.text = "Check Team Details"
-                                                //binding.chat.visibility = View.VISIBLE
                                                 binding.register.setTextColor(Color.parseColor("#FFFFFF"))
                                                 binding.register.backgroundTintList =
                                                     ColorStateList.valueOf(Color.parseColor("#4CAF50"))
@@ -178,13 +180,14 @@ class HackathonPage : AppCompatActivity() {
                                             if (participatedDoc.exists()) {
                                                 binding.register.isEnabled = true
                                                 binding.register.isClickable = true
-                                                //binding.chat.visibility = View.VISIBLE
+                                                isChat=true
                                                 binding.register.text = "Check Team Details"
                                                 binding.register.setTextColor(Color.parseColor("#FFFFFF"))
                                                 binding.register.backgroundTintList =
                                                     ColorStateList.valueOf(Color.parseColor("#4CAF50"))
 
                                             } else {
+                                                isChat=false
                                                 binding.register.text = "Registration Closed"
                                                 binding.register.setTextColor(Color.parseColor("#6E0101"))
                                                 binding.register.backgroundTintList =
@@ -203,13 +206,14 @@ class HackathonPage : AppCompatActivity() {
                                     }
                                 }
                             }
-
-
-
+                            scope.launch {
+                                CheckStatus(UID, userID)
+                            }
                             if (documentSnapshot.getString("UserID") == userID) {
                                 binding.edit.visibility = View.VISIBLE
                                 binding.delete.visibility = View.VISIBLE
-                                //binding.chat.visibility = View.VISIBLE
+                                binding.chat.visibility = View.VISIBLE
+                                teamName="Organizer"
                                 binding.info.visibility = View.VISIBLE
                             } else {
                                 binding.edit.visibility = View.GONE
@@ -243,11 +247,17 @@ class HackathonPage : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
-//                binding.chat.setOnClickListener {
-//                    val intent = Intent(this, chat::class.java)
-//                    intent.putExtra("UID", UID)
-//                    startActivity(intent)
-//                }
+                binding.chat.setOnClickListener {
+                    if(teamName.isNullOrEmpty()) {
+                        Toast.makeText(this,"You're not a participant or an organizer",Toast.LENGTH_SHORT).show()
+                    }
+                    else{
+                        val intent = Intent(this, chat::class.java)
+                        intent.putExtra("team",teamName)
+                        intent.putExtra("UID", UID)
+                        startActivity(intent)
+                    }
+                }
                 binding.like.setOnClickListener {
                     val currentTintColor = binding.like.imageTintList?.defaultColor
                     if(UID!=null){
@@ -432,5 +442,55 @@ class HackathonPage : AppCompatActivity() {
                         }
                 }
             }
+            private suspend fun CheckStatus(UID: String?, userID: String?) {
+            val db = Firebase.firestore
+                var team=""
+                var designation=""
+            if (UID != null && userID != null) {
+                try {
+                    val participatedDoc = db.collection("Users")
+                        .document(userID)
+                        .collection("Participated Hackathons")
+                        .document(UID).get().await()
 
+                    if (participatedDoc.exists()) {
+                        if (isChat) {
+                            binding.chat.visibility = View.VISIBLE
+                        }
+                    }
+
+                    val leaderDoc = db.collection("Hackathons").document(UID)
+                        .collection("Teams Participated")
+                        .document(userID).get().await()
+
+                    if (leaderDoc.exists()) {
+                        designation="Leader"
+                        team=leaderDoc.getString("Team Name")?:"Unknown"
+                    }
+
+                    val teamSnapshot = db.collection("Hackathons").document(UID)
+                        .collection("Teams Participated").get().await()
+
+                    for (teamDoc in teamSnapshot.documents) {
+                        val participantsRef = db.collection("Hackathons").document(UID)
+                            .collection("Teams Participated").document(teamDoc.id)
+                            .collection("Participants").document(userID)
+
+                        val teamData = participantsRef.get().await()
+                        if (teamData.exists()) {
+                            designation="Member"
+                            team=teamDoc.getString("Team Name")?:"Unknown"
+                            break
+                        }
+                    }
+                } catch (_: Exception) {}
+                finally{
+                    if(teamName.isNullOrEmpty()) {
+                        teamName = "$team | $designation"
+                    }else{
+                        teamName="$teamName | $team | $designation"
+                    }
+                }
+            }
+        }
 }

@@ -181,7 +181,12 @@ class AddPage : AppCompatActivity() {
                         val venue = binding.venue.text.toString()
                         val date = binding.date.text.toString()
                         val lastdate = binding.lastdate.text.toString()
-                        val size = binding.size.text.toString()
+                        var size="0"
+                        if(binding.size.text.isNullOrEmpty()) {
+                            size="0"
+                        }else{
+                            size = binding.size.text.toString()
+                        }
                         val eligibility = binding.eligibility.text.toString()
                         val overview = binding.overview.text.toString()
                         val eligibilityd = binding.eligibilityd.text.toString()
@@ -232,14 +237,23 @@ class AddPage : AppCompatActivity() {
                             binding.venueerror.error = null
                         }
                         if (size.isEmpty()) {
+                            size="0"
                             binding.sizeerror.error = "Required Field!"
                             binding.scroll.scrollTo(0, 0)
                             Toast.makeText(this, "All fields are Required !!", Toast.LENGTH_LONG).show()
                         } else if(size.toInt()<1) {
+                            size="0"
                             binding.sizeerror.error = "Minimum size is 1"
                             binding.scroll.scrollTo(0, 0)
                             Toast.makeText(this, "Size cannot be less than 1 !!", Toast.LENGTH_LONG).show()
+                        }
+                        else if(size==null){
+                            size="0"
+                            binding.sizeerror.error = "Required Field!"
+                            binding.scroll.scrollTo(0, 0)
+                            Toast.makeText(this, "All fields are Required !!", Toast.LENGTH_LONG).show()
                         }else{
+                            size=binding.size.text.toString()
                             binding.sizeerror.error = null
                         }
                         if (eligibility.isEmpty()) {
@@ -248,6 +262,9 @@ class AddPage : AppCompatActivity() {
                             Toast.makeText(this, "All fields are Required !!", Toast.LENGTH_LONG).show()
                         } else {
                             binding.eligibilityerror.error = null
+                        }
+                        if(size.toInt() <= 1){
+                            size= "0"
                         }
                         if (date.isEmpty()) {
                             binding.dateerror.error = "Required Field!"
@@ -319,7 +336,7 @@ class AddPage : AppCompatActivity() {
                         } else {
                             binding.emailerror.error = null
                         }
-                        if ( size.toInt()>=1 && lastdate.length>15 && title.isNotEmpty() && fee != null && organisingevent.isNotEmpty() && organisingauthority.isNotEmpty() && venue.isNotEmpty() && date.isNotEmpty() && lastdate.isNotEmpty() && size.isNotEmpty() && eligibility.isNotEmpty() && overview.isNotEmpty() && eligibilityd.isNotEmpty() && structure.isNotEmpty() && judging.isNotEmpty() && reward.isNotEmpty() && name.isNotEmpty() && number.isNotEmpty() && email.isNotEmpty()) {
+                        if ( size.toInt()>=1 && size!="" && size!=null && lastdate.length>15 && title.isNotEmpty() && fee != null && organisingevent.isNotEmpty() && organisingauthority.isNotEmpty() && venue.isNotEmpty() && date.isNotEmpty() && lastdate.isNotEmpty() && size.isNotEmpty() && eligibility.isNotEmpty() && overview.isNotEmpty() && eligibilityd.isNotEmpty() && structure.isNotEmpty() && judging.isNotEmpty() && reward.isNotEmpty() && name.isNotEmpty() && number.isNotEmpty() && email.isNotEmpty()) {
                             val hackathon = hashMapOf(
                                 "UserID" to userID,
                                 "Username" to userName,

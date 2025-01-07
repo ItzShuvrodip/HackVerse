@@ -361,7 +361,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="11. How to see all my organised hackathons?"
+                        android:text="11. How to see all my organized hackathons?"
                         android:textSize="16sp"
                         android:textColor="@android:color/black"
                         android:paddingStart="8dp"
@@ -486,6 +486,33 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:text="Go to the hackathon page of that particular hacakthon you'll see a heart icon next to the name of the hackathon, click that to like the hackathon, to comment scroll below there is a comment section at the end of the page, to delete the comments you've made you can simply press the delete option above your comment."
+                        android:textColor="@android:color/black"
+                        android:paddingStart="16dp"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16. How can organizers and participants chat and interact with one another?"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="If you are a participant or an organizer, you'll see a small chat option at the bottom right corner of the hackathon page, click that and start chatting."
                         android:textColor="@android:color/black"
                         android:paddingStart="16dp"
                         android:paddingBottom="8dp" />

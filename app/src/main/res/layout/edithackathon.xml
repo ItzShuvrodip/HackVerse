@@ -140,7 +140,7 @@
                     android:id="@+id/organisingevent"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="Organising Event"
+                    android:hint="Organizing Event"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
             </com.google.android.material.textfield.TextInputLayout>

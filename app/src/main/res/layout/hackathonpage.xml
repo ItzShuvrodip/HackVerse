@@ -195,7 +195,7 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/trophy"
                                 android:drawableTint="#036261"
-                                tools:text="Organising Event Name"
+                                tools:text="Organizing Event Name"
                                 android:textSize="13dp"
                                 android:textStyle=""
                                 android:maxLines="1"
@@ -712,7 +712,7 @@
                             <ImageView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:scaleType="fitCenter"
+                                android:scaleType="centerInside"
                                 android:src="@drawable/trophy2"
                                 android:layout_weight="2" />
 
@@ -921,6 +921,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:gravity="center">
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -928,7 +929,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="6dp"
         android:layout_marginBottom="16dp"
         app:srcCompat="@drawable/edit"
         app:tint="#036261"
@@ -953,7 +954,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:srcCompat="@drawable/chat"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="16dp"
         app:tint="#036261"
         android:layout_weight="1"
